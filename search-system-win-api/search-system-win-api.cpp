@@ -251,7 +251,7 @@ void GenerateReport(HWND hwnd) {
     wstring report = L"ID\tName\tType\tQuantity\r\n"; // Заголовок звіту.
     for (const auto& record : records) {
         wostringstream oss;
-        oss << record.id << L'\t' << record.name << L'\t' << record.type << L'\t' << fixed << setprecision(2) << record.quantity << L'\n';
+        oss << record.id << L'\t' << record.name << L'\t' << record.type << L'\t' << fixed << setprecision(2) << record.quantity << L"\r\n";
         report += oss.str(); // Додавання записів до звіту.
     }
     SetWindowText(hResult, report.c_str()); // Відображення звіту.
